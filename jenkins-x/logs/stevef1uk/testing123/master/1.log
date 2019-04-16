@@ -1,0 +1,117 @@
+Step: build-step-credential-initializer-9tn44:
+
+{"level":"warn","ts":1555430559.2725468,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1555430559.2729216,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-*********-testing123-master-dzzr2:
+
+{"level":"warn","ts":1555430560.2996838,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1555430561.2627785,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/*********/testing123\" @ \"v0.0.1\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-04-16T16:02:43Z" level=info msg="got "
+Using SHAs from PULL_REFS=master:
+time="2019-04-16T16:02:43Z" level=warning msg="no SHAs to merge, falling back to initial cloned commit"
+Step: build-step-setup-**-git-credentials:
+
+{"level":"info","msg":"Generated Git credentials file /workspace/xdg_config/git/credentials\n","time":"2019-04-16T16:03:28Z"}
+Step: build-step-build-npm-install:
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+up to date in 0.416s
+found 0 vulnerabilities
+
+Step: build-step-build-npm-test:
+
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+Step: build-step-build-container-build:
+
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+2019/04/16 16:03:31 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0001] Downloading base image node:9-slim           
+2019/04/16 16:03:33 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0003] Executing 0 build triggers                   
+[36mINFO[0m[0003] cmd: EXPOSE                                  
+[36mINFO[0m[0003] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0003] Using files from context: [/workspace/source] 
+[36mINFO[0m[0003] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0003] Taking snapshot of full filesystem...        
+[36mINFO[0m[0003] ENV PORT 8080                                
+[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0003] EXPOSE 8080                                  
+[36mINFO[0m[0003] cmd: EXPOSE                                  
+[36mINFO[0m[0003] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0003] WORKDIR /usr/src/app                         
+[36mINFO[0m[0003] cmd: workdir                                 
+[36mINFO[0m[0003] Changed working directory to /usr/src/app    
+[36mINFO[0m[0003] Creating directory /usr/src/app              
+[36mINFO[0m[0003] Taking snapshot of files...                  
+[36mINFO[0m[0003] Using files from context: [/workspace/source] 
+[36mINFO[0m[0003] COPY . .                                     
+[36mINFO[0m[0003] Taking snapshot of files...                  
+[36mINFO[0m[0003] CMD ["npm", "start"]                         
+[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
+2019/04/16 16:03:34 pushed blob: sha256:f831840a7b1e746cc52db9176d9cc842067ce884c09cffc4deb61b648a78995b
+2019/04/16 16:03:34 pushed blob: sha256:6d82473af5bfc7f6c16f8508086a5e1fd18777e30bf26ad3b3b5a2be920ff9ec
+2019/04/16 16:03:34 pushed blob: sha256:cdb8c872467d7e5cf616037381d8a0796e97ddc5ed886e5f5b992840f569e3e0
+2019/04/16 16:03:35 pushed blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2019/04/16 16:03:35 pushed blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2019/04/16 16:03:35 pushed blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2019/04/16 16:03:39 pushed blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2019/04/16 16:03:40 pushed blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2019/04/16 16:03:40 10.108.159.203:5000/*********/testing123:0.0.1: digest: sha256:8842876d511e6d5bc69a6d4c800e62746de43545866bc2946cb3bf4a11c3eb08 size: 1404
+Step: build-step-build-post-build:
+
+{"level":"info","msg":"no CVE provider running in the current ** namespace so skip adding image to be analysed","time":"2019-04-16T16:03:41Z"}
+Step: build-step-promote-changelog:
+
+{"level":"info","msg":"Converted /workspace/source/charts/testing123 to an unshallow repository\n","time":"2019-04-16T16:03:44Z"}
+{"level":"info","msg":"Generating change log from git ref 66abc3054eb11aaa8ac9a9f41cf51644583bdd10 =\u003e ffa7ef209df8cbd967552a6e02395149a6916a72\n","time":"2019-04-16T16:03:44Z"}
+{"level":"warning","msg":"Failed to enrich commits with issues: User.jenkins.io \"-0\" is invalid: metadata.name: Invalid value: \"-0\": a DNS-1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')\n","time":"2019-04-16T16:03:44Z"}
+{"level":"warning","msg":"Failed to enrich commits with issues: User.jenkins.io \"-0\" is invalid: metadata.name: Invalid value: \"-0\": a DNS-1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')\n","time":"2019-04-16T16:03:44Z"}
+{"level":"info","msg":"Finding issues in commit messages using git format\n","time":"2019-04-16T16:03:44Z"}
+{"level":"warning","msg":"No release found for *********/testing123 and tag v0.0.1 so creating a new release\n","time":"2019-04-16T16:03:45Z"}
+{"level":"info","msg":"Updated the release information at https://github.com/*********/testing123/releases/tag/v0.0.1\n","time":"2019-04-16T16:03:45Z"}
+{"level":"info","msg":"generated: /workspace/source/charts/testing123/templates/release.yaml\n","time":"2019-04-16T16:03:45Z"}
+{"level":"info","msg":"Created Release testing123-0-0-1 resource in namespace **\n","time":"2019-04-16T16:03:45Z"}
+{"level":"info","msg":"Updating PipelineActivity *********-testing123-master-1 with version 0.0.1\n","time":"2019-04-16T16:03:45Z"}
+{"level":"info","msg":"Updated PipelineActivities *********-testing123-master-1 with release notes URL: https://github.com/*********/testing123/releases/tag/v0.0.1\n","time":"2019-04-16T16:03:46Z"}
+Step: build-step-promote-helm-release:
+
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080\n","time":"2019-04-16T16:03:47Z"}
+{"level":"info","msg":"Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io\n","time":"2019-04-16T16:03:48Z"}
+{"level":"info","msg":"Successfully added Helm repository chartmuseum.jenkins-x.io.\n","time":"2019-04-16T16:03:49Z"}
+{"level":"info","msg":"Adding missing Helm repo: jenkins-x-chartmuseum:8080 http://jenkins-x-chartmuseum:8080\n","time":"2019-04-16T16:03:49Z"}
+{"level":"info","msg":"Successfully added Helm repository jenkins-x-chartmuseum:8080.\n","time":"2019-04-16T16:03:49Z"}
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080\n","time":"2019-04-16T16:03:49Z"}
+{"level":"info","msg":"Uploading chart file testing123-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts\n","time":"2019-04-16T16:03:49Z"}
+{"level":"info","msg":"Received 201 response: {\"saved\":true}\n","time":"2019-04-16T16:03:49Z"}
+Step: build-step-promote-**-promote:
+
+{"level":"warning","msg":"prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410","time":"2019-04-16T16:03:51Z"}
+{"level":"info","msg":"Promoting app testing123 version 0.0.1 to namespace **-staging\n","time":"2019-04-16T16:03:51Z"}
+{"level":"info","msg":"Created Pull Request: https://github.com/*********/environment-gemlunar-staging/pull/2\n\n","time":"2019-04-16T16:03:56Z"}
+{"level":"warning","msg":"Failed to query the Pull Request last commit status for https://github.com/*********/environment-gemlunar-staging/pull/2 ref c3698c8dd6676f51d695826c90c8ff0ce5a68cfd Could not find a status for repository *********/environment-gemlunar-staging with ref c3698c8dd6676f51d695826c90c8ff0ce5a68cfd\n","time":"2019-04-16T16:04:00Z"}
+{"level":"warning","msg":"Failed to query the Pull Request last commit status for https://github.com/*********/environment-gemlunar-staging/pull/2 ref c3698c8dd6676f51d695826c90c8ff0ce5a68cfd Could not find a status for repository *********/environment-gemlunar-staging with ref c3698c8dd6676f51d695826c90c8ff0ce5a68cfd\n","time":"2019-04-16T16:04:20Z"}
+{"level":"info","msg":"Pull Request https://github.com/*********/environment-gemlunar-staging/pull/2 is merged at sha 095419374992a698002e2bcf770c3ed38f2673a7\n","time":"2019-04-16T16:05:01Z"}
+{"level":"info","msg":"Pull Request merged but we are not waiting for the update pipeline to complete!","time":"2019-04-16T16:05:02Z"}
+{"level":"warning","msg":"Could not find the service URL in namespace **-staging for names testing123, **-testing123, **-staging-testing123\n","time":"2019-04-16T16:05:02Z"}
+Step: build-step-source-mkdir-*********-testing123-master-mlt4b:
+
+{"level":"warn","ts":1555430703.0567784,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1555430703.0576735,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /pvc/from-build-pack/workspace\""}
+Step: build-step-source-copy-*********-testing123-master-wxv9q:
+
+{"level":"warn","ts":1555430704.0996094,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1555430704.105594,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"cp -r /workspace/source/. /pvc/from-build-pack/workspace\""}
